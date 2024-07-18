@@ -1,0 +1,109 @@
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "Can't click on the link",
+    "description": "While I was looking at new blogs, I'm not able to click on the links.",
+    "severity": "high",
+    "addedBy": "binimaloi@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "Page not loading",
+    "description": "The homepage takes too long to load.",
+    "severity": "medium",
+    "addedBy": "sarahdoe@srhqmp.bugs.com"
+}
+
+###
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "Form submission error",
+    "description": "The contact form throws an error upon submission.",
+    "severity": "high",
+    "addedBy": "johnsmith@srhqmp.bugs.com"
+}
+
+###
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "Broken image links",
+    "description": "Some images are not loading on the gallery page.",
+    "severity": "low",
+    "addedBy": "jane_doe@srhqmp.bugs.com"
+}
+
+###
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "Typography issues",
+    "description": "Fonts are not displaying correctly on the blog post pages.",
+    "severity": "low",
+    "addedBy": "mark_twain@srhqmp.bugs.com"
+}
+
+###
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "Login not working",
+    "description": "Unable to login with correct credentials.",
+    "severity": "high",
+    "addedBy": "alice@srhqmp.bugs.com"
+}
+
+###
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "Search function slow",
+    "description": "Search results take too long to appear.",
+    "severity": "medium",
+    "addedBy": "bob@srhqmp.bugs.com"
+}
+
+###
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "UI elements overlapping",
+    "description": "Buttons and text are overlapping on the dashboard.",
+    "severity": "medium",
+    "addedBy": "charlie@srhqmp.bugs.com"
+}
+
+###
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "404 error on some links",
+    "description": "Certain links lead to 404 error pages.",
+    "severity": "low",
+    "addedBy": "diana@srhqmp.bugs.com"
+}
+
+###
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "title": "Incorrect data display",
+    "description": "User data is not displaying correctly in the profile section.",
+    "severity": "high",
+    "addedBy": "ellen@srhqmp.bugs.com"
+}
