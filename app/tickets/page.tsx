@@ -1,5 +1,9 @@
-import React from "react";
+import TicketsList from "../components/tickets";
 
-export default function TicketList() {
-  return <div>TicketList</div>;
+export default async function Tickets() {
+  return (
+    <main>
+      <TicketsList />
+    </main>
+  );
 }
