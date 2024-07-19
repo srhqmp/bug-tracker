@@ -10,11 +10,12 @@ export default function Nav() {
         <Image
           src={Logo}
           alt="bug tracker logo"
-          width={80}
+          width={50}
           placeholder="blur"
           quality={100}
+          className="mr-2"
         />
-        <h2>Bug Tracker</h2>
+        <h2 className="hidden sm:block">Bug Tracker</h2>
         <Link href="/">Dashboard</Link>
         <Link href="/tickets">Tickets</Link>
         <Link href="/tickets/new">Create New</Link>
