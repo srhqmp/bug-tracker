@@ -12,7 +12,7 @@ h2 {
   @apply font-bold text-primary text-lg;
 }
 main {
-  @apply max-w-5xl my-12 mx-auto px-8;
+  @apply max-w-4xl my-12 mx-auto px-8;
 }
 main > h2 {
   @apply mb-4 pb-2 text-base;
@@ -101,7 +101,7 @@ form button {
     rounded-md 
     py-3 px-4 my-4 
     relative 
-    overflow-hidden;
+    overflow-hidden shadow-lg;
 }
 .card h3 {
   @apply font-bold text-gray-700 text-sm 
