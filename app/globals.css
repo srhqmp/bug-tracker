@@ -130,3 +130,30 @@ form button {
   @apply absolute bottom-0 right-0 
     rounded-tl-md;
 }
+
+/* overview card styles */
+
+.issues {
+  @apply flex flex-col items-center mb-8;
+}
+
+.issues .total {
+  @apply bg-indigo-800 text-white;
+}
+
+.issues .open {
+  @apply bg-red-400 text-red-950;
+}
+
+.issues .resolved {
+  @apply bg-green-300 text-green-950;
+}
+
+.issues h3 {
+  @apply text-lg;
+}
+
+.issues .count {
+  @apply text-4xl  w-40 h-20 
+  flex justify-center items-center rounded-lg mb-2;
+}

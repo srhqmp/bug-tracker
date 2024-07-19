@@ -1,38 +1,30 @@
 import { getTickets } from "@/lib/utils";
-import { Ticket } from "@/lib/definitions";
-
-import TicketsList from "./components/tickets";
-import IssuesChart from "./components/issuesChart";
+import IssuesChart from "./issuesChart";
 
 export default async function Home() {
   const tickets = await getTickets();
-  const high = tickets.filter((ticket: Ticket) => ticket.severity === "high");
-  const medium = tickets.filter(
-    (ticket: Ticket) => ticket.severity === "medium"
-  );
-  const low = tickets.filter((ticket: Ticket) => ticket.severity === "low");
 
   return (
     <main>
       <section>
         <h2>Overview</h2>
-        <div className="card">
+        <div className="card md:flex gap-4 justify-center text-center">
           <div className="issues">
-            <div className="count">{tickets.length}</div>
+            <div className="count total">{tickets.length}</div>
             <h3>Total Issues</h3>
           </div>
           <div className="issues">
-            <div className="count">{tickets.length}</div>
+            <div className="count open">{tickets.length}</div>
             <h3>Open Issues</h3>
           </div>
           <div className="issues">
-            <div className="count">0</div>
-            <h3>Resolved Issues Today</h3>
+            <div className="count resolved">0</div>
+            <h3>Resolved Today</h3>
           </div>
         </div>
 
-        <h2>Issue Statistics</h2>
-        <IssuesChart />
+        <h2>Bug Statistics</h2>
+        <IssuesChart tickets={tickets} />
       </section>
     </main>
   );

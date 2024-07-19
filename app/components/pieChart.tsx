@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  PieChart,
+  PieChart as RechartsPieChart,
   Pie,
   Tooltip,
   Legend,
@@ -9,18 +9,21 @@ import {
   Cell,
 } from "recharts";
 
-export default function IssuesChart() {
-  const data = [
-    { name: "Low", value: 10 },
-    { name: "Medium", value: 20 },
-    { name: "High", value: 5 },
-  ];
+interface PieData {
+  name: string;
+  value: number;
+}
 
-  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+interface PieChartProps {
+  data: PieData[];
+  COLORS: string[];
+  height: number;
+}
 
+export default function PieChart({ data, height, COLORS }: PieChartProps) {
   return (
-    <ResponsiveContainer width="100%" height={300}>
-      <PieChart>
+    <ResponsiveContainer width="100%" height={height}>
+      <RechartsPieChart>
         <Pie
           data={data}
           dataKey="value"
@@ -31,13 +34,13 @@ export default function IssuesChart() {
           fill="#8884d8"
           label
         >
-          {data.map((entry, index) => (
+          {data.map((entry: PieData, index: number) => (
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
         <Tooltip />
         <Legend />
-      </PieChart>
+      </RechartsPieChart>
     </ResponsiveContainer>
   );
 }
